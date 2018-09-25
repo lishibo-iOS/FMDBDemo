@@ -13,6 +13,9 @@
 		190ABF542137805900304BC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 190ABF532137805900304BC6 /* Assets.xcassets */; };
 		190ABF572137805900304BC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 190ABF552137805900304BC6 /* LaunchScreen.storyboard */; };
 		190ABF5A2137805900304BC6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 190ABF592137805900304BC6 /* main.m */; };
+		190ABF61213781A300304BC6 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 190ABF60213781A300304BC6 /* libsqlite3.tbd */; };
+		190ABF64213781E200304BC6 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 190ABF63213781E200304BC6 /* Student.m */; };
+		A4CF226563E52CD47B2B699D /* Pods_FMDBDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A303AA08A27C38749AC0D83 /* Pods_FMDBDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		190ABF562137805900304BC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		190ABF582137805900304BC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		190ABF592137805900304BC6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		190ABF60213781A300304BC6 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		190ABF62213781E200304BC6 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		190ABF63213781E200304BC6 /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		1C7784592833DA0F2CE42FA5 /* Pods-FMDBDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FMDBDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FMDBDemo/Pods-FMDBDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		5D9C7A38932C8418DEE2E49E /* Pods-FMDBDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FMDBDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FMDBDemo/Pods-FMDBDemo.release.xcconfig"; sourceTree = "<group>"; };
+		8A303AA08A27C38749AC0D83 /* Pods_FMDBDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FMDBDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +42,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				190ABF61213781A300304BC6 /* libsqlite3.tbd in Frameworks */,
+				A4CF226563E52CD47B2B699D /* Pods_FMDBDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +55,8 @@
 			children = (
 				190ABF492137805000304BC6 /* FMDBDemo */,
 				190ABF482137805000304BC6 /* Products */,
+				AFE882AF323FDC48B1EB9F8E /* Pods */,
+				BBC8CE8DC7B6D652C70BBD32 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +75,8 @@
 				190ABF4B2137805000304BC6 /* AppDelegate.m */,
 				190ABF4D2137805000304BC6 /* ViewController.h */,
 				190ABF4E2137805000304BC6 /* ViewController.m */,
+				190ABF62213781E200304BC6 /* Student.h */,
+				190ABF63213781E200304BC6 /* Student.m */,
 				190ABF502137805000304BC6 /* Main.storyboard */,
 				190ABF532137805900304BC6 /* Assets.xcassets */,
 				190ABF552137805900304BC6 /* LaunchScreen.storyboard */,
@@ -71,6 +86,24 @@
 			path = FMDBDemo;
 			sourceTree = "<group>";
 		};
+		AFE882AF323FDC48B1EB9F8E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C7784592833DA0F2CE42FA5 /* Pods-FMDBDemo.debug.xcconfig */,
+				5D9C7A38932C8418DEE2E49E /* Pods-FMDBDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BBC8CE8DC7B6D652C70BBD32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				190ABF60213781A300304BC6 /* libsqlite3.tbd */,
+				8A303AA08A27C38749AC0D83 /* Pods_FMDBDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +111,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 190ABF5D2137805900304BC6 /* Build configuration list for PBXNativeTarget "FMDBDemo" */;
 			buildPhases = (
+				8ACC9C9FD16706FD4CF50B81 /* [CP] Check Pods Manifest.lock */,
 				190ABF432137805000304BC6 /* Sources */,
 				190ABF442137805000304BC6 /* Frameworks */,
 				190ABF452137805000304BC6 /* Resources */,
+				BC822926E1B7D6839CA1F902 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,6 +171,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8ACC9C9FD16706FD4CF50B81 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FMDBDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC822926E1B7D6839CA1F902 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FMDBDemo/Pods-FMDBDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FMDBDemo/Pods-FMDBDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		190ABF432137805000304BC6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -144,6 +218,7 @@
 				190ABF4F2137805000304BC6 /* ViewController.m in Sources */,
 				190ABF5A2137805900304BC6 /* main.m in Sources */,
 				190ABF4C2137805000304BC6 /* AppDelegate.m in Sources */,
+				190ABF64213781E200304BC6 /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,35 +356,39 @@
 		};
 		190ABF5E2137805900304BC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C7784592833DA0F2CE42FA5 /* Pods-FMDBDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G94SXGA55W;
 				INFOPLIST_FILE = FMDBDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zjkj.FMDBDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		190ABF5F2137805900304BC6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D9C7A38932C8418DEE2E49E /* Pods-FMDBDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G94SXGA55W;
 				INFOPLIST_FILE = FMDBDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zjkj.FMDBDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
